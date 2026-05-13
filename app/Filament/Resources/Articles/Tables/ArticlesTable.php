@@ -21,6 +21,7 @@ class ArticlesTable
                 TextColumn::make('title')
                     ->searchable()
                     ->limit(20),
+               
                 TextColumn::make('slug')
                     ->searchable(),
                 ImageColumn::make('image'),
