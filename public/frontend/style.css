@@ -14,3 +14,7 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 
+
+    *{
+        user-select:text !important;
+    }

@@ -2,7 +2,7 @@
     <section class="py-8">
         <div class="container mx-auto shadow-md p-5 space-x-2 rounded-lg">
            
-                <a href="" class="">
+                <a href="{{route('article', $latest_article->slug)}}" class="">
                     <h1 class="text-4xl font-bold text-red-400">
                         {{$latest_article->title}}
                     </h1>
@@ -32,7 +32,7 @@
                         <div class="grid grid-cols-3 space-x-3">
 
                             <div class="col-span-2 p-4 shadow-md rounded-md">
-                                <a href="">
+                                <a href="{{route('article', $lat_cat_article->slug)}}">
                                     <img 
                                         src="{{ asset(Storage::url($lat_cat_article->image)) }}" 
                                         alt="image"
@@ -50,7 +50,7 @@
                                 @if (count($other_articles) > 0)
                                 
                                 @foreach ($other_articles as $article)
-                                    <a class="grid grid-cols-3 space-x-2 items-center shadow-md rounded-md overflow-hidden" href="">
+                                    <a class="grid grid-cols-3 space-x-2 items-center shadow-md rounded-md overflow-hidden" href="{{route('article', $article->slug)}}">
                                     <img 
                                         class="pr-2 h-[86px] w-full object-cover" 
                                         src="{{asset(Storage::url($article->image))}}" 
