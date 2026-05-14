@@ -1,4 +1,4 @@
-<header class="bg-white">
+<header class="bg-white sticky top-0 z-40">
 
     <div class="flex justify-around items-center container mx-auto py-2">
         <div class="">
@@ -7,7 +7,9 @@
             <img class="w-[150px] h-[20px]" src="{{asset('frontend/images/purpleline.png')}}" alt="purple_line">
         </div>
         <div>
-            <p class="text-xl">बुधबार, ३० वैशाख २०८३</p>
+            <p class="text-xl">
+                {{toNepaliDate(now()->format('Y-m-d'))}}
+            </p>
         </div>
     </div>
 
@@ -15,12 +17,17 @@
     <div class="bg-gray-100">
         <nav class="mt-5 container mx-auto flex justify-between items-center p-2">
 
-        <div class="flex gap-20 items-center font-bold">
-           <a href="">fddfdgf</a>
-           <a href="">fdczzgf</a>
-           <a href="">fdggjggf</a>
-           <a href="">fdfdgf</a>
-           <a href="">fdcxrytgf</a>
+        <div class="flex gap-20 items-center text-xl font-bold">
+           <a href="{{route('home')}}" class=" group relative inline-flex items-center gap-1 text-slate-700 font-medium
+                  after:absolute after:bottom-[-2px] after:left-0 
+                  after:h-[2.5px] after:w-0 after:bg-blue-600 
+                  after:transition-all after:duration-300 hover:after:w-full">गृहपृष्ठ</a>
+           @foreach ($categories as $category )
+                <a href="{{route('home')}}" class="group relative inline-flex items-center gap-1 text-slate-700 font-medium
+                  after:absolute after:bottom-[-2px] after:left-0 
+                  after:h-[2.5px] after:w-0 after:bg-blue-600 
+                  after:transition-all after:duration-300 hover:after:w-full">{{$category->title}}</a> 
+           @endforeach
         </div>
 
         <div>
