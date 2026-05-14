@@ -1,4 +1,4 @@
-<x-frontend-layout>
+<x-frontend-layout title="कटुञ्जे दैनिक | search: {{$q}}">
     <section class="py-8">
         <div class="container mx-auto ">
             <div class="text-3xl font-bold mb-6">
@@ -36,14 +36,14 @@
 
             </div>
 
-            <div class=" ">
+            <aside class=" ">
                 @foreach ($advertises as $ad )
                     <a href="{{$ad->redirect_link}}" target="_blank">
                         <img class="h-[400px] rounded-md object-cover w-full hover:shadow-[#7171e1] shadow-md shadow-[gray]" src="{{asset(Storage::url($ad->banner))}}" alt="{{$ad->company_name}}">
                     </a>
                     
                 @endforeach
-            </div>
+            </aside>
             </div>
 
         </div>

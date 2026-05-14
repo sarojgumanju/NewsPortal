@@ -14,7 +14,7 @@
     </div>
 
 
-    <div class="bg-gray-100">
+    <div class="bg-gray-200">
         <nav class="mt-5 container mx-auto flex justify-between items-center p-2">
 
         <div class="flex gap-20 items-center text-xl font-bold">

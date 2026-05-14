@@ -1,4 +1,4 @@
-<x-frontend-layout>
+<x-frontend-layout title="{{$category->meta_title}}" keywords="{{$category->meta_keyword}}" description="{{$category->meta_description}}" image="{{asset('/storage/app/public/01KRGP7VH6PBZ9RZCP8SA1D4S1.jpg')}}">
     <section class="py-8">
         <div class="container mx-auto grid grid-cols-3 gap-y-10 gap-x-8">
 
@@ -31,20 +31,18 @@
                 
                 @endforeach
 
-                <div>
-                    {{$articles->links()}}
-                </div>
+                
 
             </div>
 
-            <div class=" ">
+            <aside class=" ">
                 @foreach ($advertises as $ad )
                     <a href="{{$ad->redirect_link}}" target="_blank">
                         <img class="h-[400px] rounded-md object-cover w-full hover:shadow-[#7171e1] shadow-md shadow-[gray]" src="{{asset(Storage::url($ad->banner))}}" alt="{{$ad->company_name}}">
                     </a>
                     
                 @endforeach
-            </div>
+            </aside>
 
         </div>
     </section>

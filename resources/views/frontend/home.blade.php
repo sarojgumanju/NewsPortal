@@ -1,4 +1,4 @@
-<x-frontend-layout>
+<x-frontend-layout title="कटुञ्जे दैनिक | गृहपृष्ठ " description="कटुञ्जे दैनिक provides latest news." keywords="कटुञ्जे दैनिक, Katunje Dainik, Latest News">
     <section class="py-8">
         <div class="container mx-auto shadow-md p-5 space-x-2 rounded-lg">
            
